@@ -142,7 +142,7 @@ public class Market implements EmployeeOperations,ShopOperations
             {
                 System.out.println("     !!!  Shop number :  " + j + "  !!!  ");
                 System.out.println("Shop Name : " + shops[i].getName());
-                System.out.println("Shop ID   : " + shops[i].getName());
+                System.out.println("Shop ID   : " + shops[i].getSid());
                 shops[i].showAllProducts();
                 j++;
 
