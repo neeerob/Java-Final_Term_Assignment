@@ -8,7 +8,6 @@ import fileio.*;
 public class Start 
 {
 
-
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
@@ -20,19 +19,9 @@ public class Start
         System.out.println("-----------------------------------");
         System.out.println("||    Welcome To Neee Market     ||");
         System.out.println("-----------------------------------\n");
-
-
         do
         {
-            System.out.println("******       Main Menu      *****\n");
-            System.out.println();
-            System.out.println("What do you want to do?");
-            System.out.println("\t1. Employee Management");
-            System.out.println("\t2. Shop Management");
-            System.out.println("\t3. Shop Product Management");
-            System.out.println("\t4. Product Quentity add-sell");
-            System.out.println("\t5. Exit");
-            System.out.println("-----------------------------------\n");
+            Start.mainOption();
             System.out.print("Enter Your Choice: ");
             choice = scan.nextInt();
             switch(choice)
@@ -42,18 +31,9 @@ public class Start
                     System.out.println("-----------------------------------");
                     System.out.println("You Choose Employee management option");
                     System.out.println("-----------------------------------\n");
-                    
                     while(choice != 5)
                     {
-                        System.out.println("What do you want to do?");
-                        System.out.println("\t1. Insert new Employee");
-                        System.out.println("\t2. Remove Existing Employee");
-                        System.out.println("\t3. Show All Employees");
-                        System.out.println("\t4. Search an Employee");
-                        System.out.println("\t5. Go Back to Main Menu");
-                        System.out.println("-----------------------------------\n");
-                        System.out.println();
-
+                        Start.empManagementOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
 
@@ -178,14 +158,7 @@ public class Start
                     System.out.println("-----------------------------------\n");
                     while(choice != 5)
                     {
-                        System.out.println("What do you want to do?");
-                        System.out.println("\t1. Insert New Shop");
-                        System.out.println("\t2. Remove Existing Shop");
-                        System.out.println("\t3. Show All Shops");
-                        System.out.println("\t4. Search a Shop");
-                        System.out.println("\t5. Go Back to Main Menu");
-                        System.out.println("-----------------------------------\n");
-                        System.out.println();
+                        Start.shopManagementOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
 
@@ -310,14 +283,7 @@ public class Start
                     System.out.println("-----------------------------------\n");
                     while(choice != 5)
                     {
-                        System.out.println("What do you want to do?");
-                        System.out.println("\t1. Insert New Product");
-                        System.out.println("\t2. Remove Existing Product");
-                        System.out.println("\t3. Show All Products");
-                        System.out.println("\t4. Search a Product");
-                        System.out.println("\t5. Go Back to Main Menu");
-                        System.out.println("-----------------------------------\n");
-                        System.out.println();
+                        Start.productManagementOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
 
@@ -556,13 +522,7 @@ public class Start
                     System.out.println("-----------------------------------\n");
                     while(choice != 5)
                     {
-                        System.out.println("What do you want to do?");
-                        System.out.println("\t1. Add Product");
-                        System.out.println("\t2. Sell Product");
-                        System.out.println("\t3. Show Add Sell History");
-                        System.out.println("\t4. Go Back to Main Menu");
-                        System.out.println("-----------------------------------\n");
-                        System.out.println();
+                        Start.addSellOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
                         switch(choice)
@@ -703,13 +663,71 @@ public class Start
 
             }
 
-
-        }while(choice != 5);
-
-        
+        }while(choice != 5);   
     }
 
-    
+     public static void mainOption()
+    {   System.out.println("******       Main Menu      *****\n");
+        System.out.println();
+        System.out.println("What do you want to do?");
+        System.out.println("\t1. Employee Management");
+        System.out.println("\t2. Shop Management");
+        System.out.println("\t3. Shop Product Management");
+        System.out.println("\t4. Product Quentity add-sell");
+        System.out.println("\t5. Exit");
+        System.out.println("-----------------------------------\n");
+    }
+    public static void empManagementOption()
+    {
+        
+        System.out.println("What do you want to do?");
+        System.out.println("\t1. Insert new Employee");
+        System.out.println("\t2. Remove Existing Employee");
+        System.out.println("\t3. Show All Employees");
+        System.out.println("\t4. Search an Employee");
+        System.out.println("\t5. Go Back to Main Menu");
+        System.out.println("-----------------------------------\n");
+        System.out.println();
+        
+    }
+    public static void shopManagementOption()
+    {
+        
+        System.out.println("What do you want to do?");
+        System.out.println("\t1. Insert New Shop");
+        System.out.println("\t2. Remove Existing Shop");
+        System.out.println("\t3. Show All Shops");
+        System.out.println("\t4. Search a Shop");
+        System.out.println("\t5. Go Back to Main Menu");
+        System.out.println("-----------------------------------\n");
+        System.out.println();
+       
+    }
+    public static void productManagementOption()
+    {
+        
+        System.out.println("What do you want to do?");
+        System.out.println("\t1. Insert New Product");
+        System.out.println("\t2. Remove Existing Product");
+        System.out.println("\t3. Show All Products");
+        System.out.println("\t4. Search a Product");
+        System.out.println("\t5. Go Back to Main Menu");
+        System.out.println("-----------------------------------\n");
+        System.out.println();
+
+    }
+    public static void addSellOption()
+    {
+        
+        System.out.println("What do you want to do?");
+        System.out.println("\t1. Add Product");
+        System.out.println("\t2. Sell Product");
+        System.out.println("\t3. Show Add Sell History");
+        System.out.println("\t4. Go Back to Main Menu");
+        System.out.println("-----------------------------------\n");
+        System.out.println();
+        
+    }
 
 }
 
