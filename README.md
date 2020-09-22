@@ -7,6 +7,9 @@ Final term assignment. A simple market management app...
 <img width="824" alt="Screenshot 2020-09-12 at 5 53 11 PM" src="https://user-images.githubusercontent.com/62304481/92995101-0fbd9f80-f522-11ea-86b2-3f50747c7ca6.png">
 
 ## Completed and need to complete:
+                      
+   - [x] All Complete
+
 - [x] Open and creat repository
 - [x] Create general structure
 - [x] Write interfaces
@@ -15,7 +18,7 @@ Final term assignment. A simple market management app...
 - [x] Write basic structere of start.java file
 - [x] Complete start.java file
 
-     - [x] All Complete
+     
 
 ## Requirements:
  * Object Oriented Programming Principles must be followed.
