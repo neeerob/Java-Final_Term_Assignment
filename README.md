@@ -17,6 +17,7 @@ Final term assignment. A simple market management app...
 - [x] Import classes in interfaces
 - [x] Write basic structere of start.java file
 - [x] Complete start.java file
+- [ ] Make button
 - [ ] Make this in GUI
      
 
