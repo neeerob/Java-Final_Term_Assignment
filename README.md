@@ -1,6 +1,6 @@
 # Market Management Application
 
-Final term assignment. A simple market management app...
+Final term assignment. A simple market management app.
 
 ## Basic structure of this App
 
