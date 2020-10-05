@@ -42,15 +42,15 @@ public class Start
                                     System.out.print("Enter Employee ID: ");
                                     String empId1 = scan.next();
                                     
-							        System.out.print("Enter Employee Name: ");
+				    System.out.print("Enter Employee Name: ");
                                     String empName1 = scan.next();
                                     
-							        System.out.print("Enter Employe Salary: ");
-							        double salary1 = scan.nextDouble();
+			            System.out.print("Enter Employe Salary: ");
+			            double salary1 = scan.nextDouble();
 							
-							        Employee employee1 = new Employee();
-							        employee1.setEmpId(empId1);
-							        employee1.setName(empName1);
+				    Employee employee1 = new Employee();
+		                    employee1.setEmpId(empId1);
+			            employee1.setName(empName1);
                                     employee1.setSalary(salary1);
                                     if(market.insertEmployee(employee1))
                                     {
@@ -71,12 +71,12 @@ public class Start
                                     System.out.println("-----------------------------------\n");
 
                                     System.out.print("Enter an Employee ID to Remove: ");
-							        String empId2 = scan.next();
+	                            String empId2 = scan.next();
 							
-							        Employee employee2 = market.searchEmployee(empId2);
+			            Employee employee2 = market.searchEmployee(empId2);
 							
-							        if(employee2 != null)
-							        {
+				    if(employee2 != null)
+		                    {
                                         if(market.removeEmployee(employee2))
                                         {
                                             System.out.println("Successful!!");
@@ -87,10 +87,10 @@ public class Start
                                             System.out.println("Unsuccessful!!");
                                             System.out.println("Employee Can Not be Removed......");
                                         }
-							        }
-							        else
-							        {
-								        System.out.println("Employee Does Not Exist");
+				     }
+		                     else
+		                    {
+			                System.out.println("Employee Does Not Exist");
                                     }
                                     System.out.println("-----------------------------------");
                             
@@ -108,21 +108,21 @@ public class Start
                                     System.out.println("  You Choose Search an Employee ");
                                     System.out.println("-----------------------------------\n");
                                     System.out.print("Enter an Employee ID to Search: ");
-							        String empId3 = scan.next();
+				    String empId3 = scan.next();
 							
-							        Employee e3 = market.searchEmployee(empId3);
+			            Employee e3 = market.searchEmployee(empId3);
 							
-							        if(e3 != null)
-							        {
-								        System.out.println("   !!!   Employee Found    !!!");
-								        System.out.println("Employee ID     : "+e3.getEmpId());
-								        System.out.println("Employee Name   : "+e3.getName());
-								        System.out.println("Employee Salary : "+e3.getSalary()+" $");
-							        }
-							        else
-							        {
-								        System.out.println("Employee Does Not Exist");
-							        }
+				    if(e3 != null)
+			            {
+				        System.out.println("   !!!   Employee Found    !!!");
+			                System.out.println("Employee ID     : "+e3.getEmpId());
+				        System.out.println("Employee Name   : "+e3.getName());
+				        System.out.println("Employee Salary : "+e3.getSalary()+" $");
+				    }
+				    else
+			            {
+				        System.out.println("Employee Does Not Exist");
+				    }
                                     
                                     System.out.println("-----------------------------------");
                                 break;
@@ -164,8 +164,8 @@ public class Start
                                 System.out.println("-----------------------------------\n");
 
                                 System.out.print("Enter Shop Name: ");
-							    String shopName1 = scan.next();
-							    System.out.print("Enter Shop NID: ");
+			        String shopName1 = scan.next();
+				System.out.print("Enter Shop NID: ");
                                 String shopNid = scan.next();
                                 
                                 //Shop shop = new Shop();
@@ -197,7 +197,7 @@ public class Start
 							
                                     Shop shop2 = market.searchShop(shopNid2);
                                     if(shop2 != null)
-							        {
+				    {
                                         if(market.removeShop(shop2))
                                         {
                                             System.out.println("Successful!!");
@@ -208,11 +208,11 @@ public class Start
                                             System.out.println("Unsuccessful!!");
                                             System.out.println("Shop Can Not be Removed......");
                                         }
-							        }
-							        else
-							        {
-								        System.out.println("Shop Does Not Exist");
-                                    }
+		                     }
+				     else
+				     {
+					System.out.println("Shop Does Not Exist");
+                                     }
                                     System.out.println("-----------------------------------");
                                     
                              break;
@@ -233,20 +233,20 @@ public class Start
                                     System.out.println("-----------------------------------\n");
 
                                     System.out.print("Enter an Shop ID to Search: ");
-							        String shopNid4 = scan.next();
+				    String shopNid4 = scan.next();
 							
-							        Shop shop4 = market.searchShop(shopNid4);
+				    Shop shop4 = market.searchShop(shopNid4);
 							
-							        if(shop4 != null)
-							        {
-								        System.out.println("  !!!  Shop Found   !!!");
-								        System.out.println("Shop NID   : "+shop4.getName());
-								        System.out.println("Shop Name  : "+shop4.getSid());
-								        shop4.showAllProducts();
-							        }
-							        else
-							        {
-								        System.out.println("Shop Does Not Exist");
+			            if(shop4 != null)
+				    {
+				        System.out.println("  !!!  Shop Found   !!!");
+				        System.out.println("Shop NID   : "+shop4.getName());
+				        System.out.println("Shop Name  : "+shop4.getSid());
+				        shop4.showAllProducts();
+				    }
+				    else
+				    {
+					System.out.println("Shop Does Not Exist");
                                     }
                                     System.out.println("-----------------------------------");
 
@@ -433,20 +433,20 @@ public class Start
                                 System.out.println("  You Choose Search a Product ");
                                 System.out.println("-----------------------------------\n");
                                 System.out.print("Enter an Product ID to Search: ");
-							        String productID = scan.next();			
-							        Product product4 = shop.searchProduct(productID);			
-							        if(product4 != null)
-							        {
-								        System.out.println("   !!!   Product Found    !!!");
-								        System.out.println("Product ID     : "+product4.getPid());
-								        System.out.println("Product Name   : "+product4.getName());
+				String productID = scan.next();			
+				Product product4 = shop.searchProduct(productID);			
+				if(product4 != null)
+				{
+				        System.out.println("   !!!   Product Found    !!!");
+				        System.out.println("Product ID     : "+product4.getPid());
+					System.out.println("Product Name   : "+product4.getName());
                                         System.out.println("Product Price : "+product4.getPrice()+" $");
                                         System.out.println("Product Available Quantity : "+product4.getAvailableQuantity());                                
-							        }
-							        else
-							        {
-								        System.out.println("Product Does Not Exist");
-							        }                               
+				}
+				else
+				{
+				        System.out.println("Product Does Not Exist");
+				}                               
                                     System.out.println("-----------------------------------");
                                 break;
 
