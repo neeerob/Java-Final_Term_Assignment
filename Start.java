@@ -1,19 +1,15 @@
 import java.lang.*;
 import java.util.Scanner;
-
-
 import classes.*;
 import fileio.*;
 
 public class Start 
 {
-
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
         FileReadWriteDemo fileReadWrite = new FileReadWriteDemo();
         int choice;
-
         Market market = new Market();
         Shop shop = new Shop();
         System.out.println("-----------------------------------");
@@ -27,7 +23,6 @@ public class Start
             switch(choice)
             {
                 case 1: //Emp management
-
                     System.out.println("-----------------------------------");
                     System.out.println("You Choose Employee management option");
                     System.out.println("-----------------------------------\n");
@@ -36,23 +31,18 @@ public class Start
                         Start.empManagementOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
-
                             switch(choice)
                             {
                                 case 1: //insert Employee
                                     System.out.println("-----------------------------------");
                                     System.out.println("  You Choose Insert new employee  ");
                                     System.out.println("-----------------------------------\n");
-
                                     System.out.print("Enter Employee ID: ");
                                     String empId1 = scan.next();
-                                    
 							        System.out.print("Enter Employee Name: ");
-                                    String empName1 = scan.next();
-                                    
+                                    String empName1 = scan.next(); 
 							        System.out.print("Enter Employe Salary: ");
-							        double salary1 = scan.nextDouble();
-							
+							        double salary1 = scan.nextDouble();							
 							        Employee employee1 = new Employee();
 							        employee1.setEmpId(empId1);
 							        employee1.setName(empName1);
@@ -60,14 +50,12 @@ public class Start
                                     if(market.insertEmployee(employee1))
                                     {
                                         System.out.println("Inserting ...");
-                                        System.out.println("Successful!! Employee inserted with ID :" + employee1.getEmpId());
-                                        
+                                        System.out.println("Successful!! Employee inserted with ID :" + employee1.getEmpId());                                       
                                     }
                                     else
                                     {
                                         System.out.println("Unsuccessful ...");
-                                        System.out.println("Employee can't inserted!!");
-                                        
+                                        System.out.println("Employee can't inserted!!");                                       
                                     }
                                     System.out.println("-----------------------------------");
                                 break;
@@ -76,12 +64,9 @@ public class Start
                                     System.out.println("-----------------------------------");
                                     System.out.println("  You Choose Remove Existing Employee ");
                                     System.out.println("-----------------------------------\n");
-
                                     System.out.print("Enter an Employee ID to Remove: ");
-							        String empId2 = scan.next();
-							
-							        Employee employee2 = market.searchEmployee(empId2);
-							
+							        String empId2 = scan.next();							
+							        Employee employee2 = market.searchEmployee(empId2);							
 							        if(employee2 != null)
 							        {
                                         if(market.removeEmployee(employee2))
@@ -99,8 +84,7 @@ public class Start
 							        {
 								        System.out.println("Employee Does Not Exist");
                                     }
-                                    System.out.println("-----------------------------------");
-                            
+                                    System.out.println("-----------------------------------");                          
                                 break;
 
                                 case 3: //show all employee
@@ -115,10 +99,8 @@ public class Start
                                     System.out.println("  You Choose Search an Employee ");
                                     System.out.println("-----------------------------------\n");
                                     System.out.print("Enter an Employee ID to Search: ");
-							        String empId3 = scan.next();
-							
-							        Employee e3 = market.searchEmployee(empId3);
-							
+							        String empId3 = scan.next();							
+							        Employee e3 = market.searchEmployee(empId3);						
 							        if(e3 != null)
 							        {
 								        System.out.println("   !!!   Employee Found    !!!");
@@ -129,27 +111,21 @@ public class Start
 							        else
 							        {
 								        System.out.println("Employee Does Not Exist");
-							        }
-                                    
+							        }                                    
                                     System.out.println("-----------------------------------");
                                 break;
 
                                 case 5:  //back
                                     System.out.println("Going back ....");
                                     System.out.println();
-
-
                                 break;
 
                                 default:
                                     System.out.println("You Press Wrong keyword !!");
-
                                 break;
-
                             }
                     }
-                    choice = 7;
-                    
+                    choice = 7;                   
                 break;
 
                 case 2: //Shop management
@@ -161,7 +137,6 @@ public class Start
                         Start.shopManagementOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
-
                         switch(choice)
                         {
                             case 1:
@@ -169,16 +144,13 @@ public class Start
                                 System.out.println("-----------------------------------");
                                 System.out.println("  You Choose Insert New Shop ");
                                 System.out.println("-----------------------------------\n");
-
                                 System.out.print("Enter Shop Name: ");
 							    String shopName1 = scan.next();
 							    System.out.print("Enter Shop NID: ");
-                                String shopNid = scan.next();
-                                
+                                String shopNid = scan.next();                              
                                 //Shop shop = new Shop();
                                 shop.setName(shopName1);
-                                shop.setSid(shopNid);
-                                
+                                shop.setSid(shopNid);                               
                                 if(market.insertShop(shop))
                                 {
                                     System.out.println("Inserting ...");
@@ -190,18 +162,14 @@ public class Start
                                     System.out.println("Shop can't inserted!!");
                                 }
                                 System.out.println("-----------------------------------");
-
                              break;
 
                             case 2:
-
                                     System.out.println("-----------------------------------");
                                     System.out.println("  You Choose Remove Existing Shop ");
                                     System.out.println("-----------------------------------\n");
-
                                     System.out.print("Enter an Shop ID to Search: ");
-							        String shopNid2 = scan.next();
-							
+							        String shopNid2 = scan.next();							
                                     Shop shop2 = market.searchShop(shopNid2);
                                     if(shop2 != null)
 							        {
@@ -220,30 +188,23 @@ public class Start
 							        {
 								        System.out.println("Shop Does Not Exist");
                                     }
-                                    System.out.println("-----------------------------------");
-                                    
+                                    System.out.println("-----------------------------------");                                   
                              break;
 
                             case 3:
-
                                     System.out.println("-----------------------------------");
                                     System.out.println("  You Choose Show All Shops ");
                                     System.out.println("-----------------------------------\n");
                                     market.showAllShops();
-
                              break;
 
                             case 4:
-
                                     System.out.println("-----------------------------------");
                                     System.out.println("  You Choose Search a Shop ");
                                     System.out.println("-----------------------------------\n");
-
                                     System.out.print("Enter an Shop ID to Search: ");
-							        String shopNid4 = scan.next();
-							
-							        Shop shop4 = market.searchShop(shopNid4);
-							
+							        String shopNid4 = scan.next();						
+							        Shop shop4 = market.searchShop(shopNid4);						
 							        if(shop4 != null)
 							        {
 								        System.out.println("  !!!  Shop Found   !!!");
@@ -256,7 +217,6 @@ public class Start
 								        System.out.println("Shop Does Not Exist");
                                     }
                                     System.out.println("-----------------------------------");
-
                              break;
 
                             case 5:
@@ -265,16 +225,11 @@ public class Start
                              break;
 
                             default:
-
                                     System.out.println("You Press Wrong keyword !!");
-
                              break;
                         }
-
-                    }
-                    
+                    }             
                     choice = 7;
-
                 break;
 
                 case 3: // Product management
@@ -286,7 +241,6 @@ public class Start
                         Start.productManagementOption();
                         System.out.print("Enter Your Choice: ");
                         choice = scan.nextInt();
-
                         switch (choice)
                         {
                             case 1:
@@ -294,48 +248,36 @@ public class Start
                                 System.out.println("-----------------------------------");
                                 System.out.println("You Choose Insert New Product for a Shop ");
                                 System.out.println("-----------------------------------\n");
-
                                 System.out.print("Enter Shop ID: ");
-                                String sid1 = scan.next();
-                                
+                                String sid1 = scan.next();                              
                                 if(market.searchShop(sid1) != null)
                                 {
                                     System.out.println("\tChoose your Product Type \n");
 								    System.out.println("\t1. Local Product");
 								    System.out.println("\t2. Imported Product");
                                     System.out.println("\t3. Go Back....");
-
                                     choice = scan.nextInt();
-
                                     switch(choice)
                                     {
                                         case 1:
-
                                             System.out.println("You choose Local Product !");
                                             System.out.println("            --            ");
                                             System.out.print("Enter Product ID : ");
                                             String pID1 = scan.next();
-
                                             System.out.print("Enter Product Name : ");
                                             String pName1 = scan.next();
-
                                             System.out.print("Enter Product Available Quantity : ");
                                             int pAvailableQuantity1 = scan.nextInt();
-
                                             System.out.print("Enter Product Price : ");
                                             double pPrice1 = scan.nextDouble();
-
                                             System.out.print("Enter Product Discount Rate : ");
                                             double pDiscountRate1 = scan.nextDouble();
-
                                             LocalProduct localProduct = new LocalProduct();
-
                                             localProduct.setPid(pID1);
                                             localProduct.setName(pName1);
                                             localProduct.setAvailableQuantity(pAvailableQuantity1);
                                             localProduct.setPrice(pPrice1);
                                             localProduct.setDiscountRate(pDiscountRate1);
-
                                             if(market.searchShop(sid1).insertProduct(localProduct))
                                             {
                                                 System.out.println("Product Inserted For Shop ID : " + sid1);
@@ -345,94 +287,68 @@ public class Start
                                                 System.out.println("Unsuccessful ...");
                                                 System.out.println("Product can't inserted!!");
                                             }
-
                                          break;
 
                                         case 2:
-
                                             System.out.println("You choose Local Product !");
                                             System.out.println("            --            ");
                                             System.out.print("Enter Product ID : ");
                                             String pID2 = scan.next();
-
                                             System.out.print("Enter Product Name : ");
                                             String pName2 = scan.next();
-
                                             System.out.print("Enter Product Available Quantity : ");
                                             int pAvailableQuantity2 = scan.nextInt();
-
                                             System.out.print("Enter Product Price : ");
                                             double pPrice2 = scan.nextDouble();
-
                                             System.out.print("Enter Product Countruy name : ");
                                             String pCountryName = scan.next();
-
                                             ImportedProduct importedProduct = new ImportedProduct();
-
                                             importedProduct.setPid(pID2);
                                             importedProduct.setName(pName2);
                                             importedProduct.setAvailableQuantity(pAvailableQuantity2);
                                             importedProduct.setPrice(pPrice2);
                                             importedProduct.setCountryName(pCountryName);
-
                                             if(market.searchShop(sid1).insertProduct(importedProduct))
                                             {
-                                                    System.out.println("Product Inserted For Shop ID : " + sid1);
+                                                System.out.println("Product Inserted For Shop ID : " + sid1);
                                             }
                                             else 
                                             {
-                                                    System.out.println("Unsuccessful ...");
-                                                    System.out.println("Product can't inserted!!");
+                                                System.out.println("Unsuccessful ...");
+                                                System.out.println("Product can't inserted!!");
                                             }
-
                                          break;
 
                                         case 3:
-
                                             System.out.println("Going back ....");
                                             System.out.println();
-
                                          break;
 
                                         default:
-
                                             System.out.println("You press Wrong keyword !!");
                                             System.out.println();
-
                                          break;
-                                    }
-                                    
-
+                                    }                        
                                 }
                                 else 
                                 {
                                     System.out.print("Shop ID mismach!!");
                                 }
-
-                            
-
-
                                 break;
 
                             case 2:
-
                                 System.out.println("-----------------------------------");
                                 System.out.println("You Choose Remove Existing Product for a Shop ");
                                 System.out.println("-----------------------------------\n");
-
                                 System.out.print("Enter Shop ID: ");
                                 String sid2 = scan.next();
-
                                 if(market.searchShop(sid2) != null)
                                 {
                                     System.out.println("   Shop Found!! ");
-
                                     System.out.print("Enter Product ID: ");
                                     String productID2 = scan.next();
-
                                     //Shop shop = new Shop();
                                     Product product = shop.searchProduct(productID2);
-
                                     if(product != null)
                                     {
                                         if(shop.removeProduct(product))
@@ -445,75 +361,54 @@ public class Start
                                             System.out.println("Unsuccessful!!");
                                             System.out.println("Product Can Not be Removed......");
                                         }
-                                    }
-                                
+                                    }                               
                                 }
                                 else
 							    {
 								    System.out.println("Product Does Not Exist !!");
                                 }
                                 System.out.println("-----------------------------------");
-
-
                                 break;
 
                             case 3:
-
                                 System.out.println("-----------------------------------");
                                 System.out.println("  You Choose Show All Products ");
                                 System.out.println("-----------------------------------\n");
                                 shop.showAllProducts();
-                                
-
                                 break;
 
                             case 4:
-
                                 System.out.println("-----------------------------------");
                                 System.out.println("  You Choose Search a Product ");
                                 System.out.println("-----------------------------------\n");
-
                                 System.out.print("Enter an Product ID to Search: ");
-							        String productID = scan.next();
-							
-							        Product product4 = shop.searchProduct(productID);
-							
+							        String productID = scan.next();						
+							        Product product4 = shop.searchProduct(productID);							
 							        if(product4 != null)
 							        {
 								        System.out.println("   !!!   Product Found    !!!");
 								        System.out.println("Product ID     : "+product4.getPid());
 								        System.out.println("Product Name   : "+product4.getName());
                                         System.out.println("Product Price : "+product4.getPrice()+" $");
-                                        System.out.println("Product Available Quantity : "+product4.getAvailableQuantity());
-                                        
+                                        System.out.println("Product Available Quantity : "+product4.getAvailableQuantity());                                      
 							        }
 							        else
 							        {
 								        System.out.println("Product Does Not Exist");
-							        }
-                                    
+							        }                                  
                                     System.out.println("-----------------------------------");
-
                                 break;
 
                             case 5:
                                 System.out.println("Going back ....");
                                 System.out.println();
                                 break;
-
                             default:
-
                                 System.out.println("You Press Wrong keyword !!");
-
-                                break;
-
-                            
-                        }
-
-                        
+                                break;                         
+                        }    
                     }
                     choice = 7;
-
                 break;
 
                 case 4: // Add Sell management
@@ -528,24 +423,19 @@ public class Start
                         switch(choice)
                         {
                             case 1:
-
                                 System.out.println("-----------------------------------");
                                 System.out.println("  You Choose Add Product ");
                                 System.out.println("-----------------------------------\n");
-
                                 System.out.print("Enter shop ID : ");
                                 String sID1 = scan.next();
-
                                 if(market.searchShop(sID1) != null)
                                 {
                                     System.out.print("Enter Product ID : ");
-                                    String pID1 = scan.next();
-                                    
+                                    String pID1 = scan.next();                             
                                     if(market.searchShop(sID1).searchProduct(pID1) != null)
                                     {
                                         System.out.print("Enter Product quantity to add : ");
                                         int addAvailableQuantity1 = scan.nextInt();
-
                                         if(market.searchShop(sID1).searchProduct(pID1).addQuantity(addAvailableQuantity1))
                                         {
                                             System.out.println("Successfull...");
@@ -559,40 +449,32 @@ public class Start
                                             fileReadWrite.writeInFile("Unsuccessfull add attempt by Shop ID: "+sID1);
                                             fileReadWrite.writeInFile("------------------------------------------------");
                                         }
-
                                     }
                                     else
                                     {
                                         System.out.println("Invalade Product ID !! !! ");
                                     }
-
                                 }
                                 else 
                                 {
                                     System.out.println("Product ID Missmatch !! ");
                                 }
-
                              break;
 
                             case 2:
-
                                 System.out.println("-----------------------------------");
                                 System.out.println("  You Choose Sell Product ");
                                 System.out.println("-----------------------------------\n");
-
                                 System.out.print("Enter shop ID : ");
                                 String sID2 = scan.next();
-
                                 if(market.searchShop(sID2) != null)
                                 {
                                     System.out.print("Enter Product ID : ");
-                                    String pID1 = scan.next();
-                                    
+                                    String pID1 = scan.next();                                
                                     if(market.searchShop(sID2).searchProduct(pID1) != null)
                                     {
                                         System.out.print("Enter Product quantity to Sell : ");
                                         int addAvailableQuantity1 = scan.nextInt();
-
                                         if(market.searchShop(sID2).searchProduct(pID1).sellQuantity(addAvailableQuantity1))
                                         {
                                             System.out.println("Successfull...");
@@ -606,63 +488,48 @@ public class Start
                                             fileReadWrite.writeInFile("Unsuccessfull sell attempt by Shop ID: "+sID2);
                                             fileReadWrite.writeInFile("------------------------------------------------");
                                         }
-
                                     }
                                     else
                                     {
                                         System.out.println("Invalade Product ID !! !! ");
                                     }
-
                                 }
                                 else 
                                 {
                                     System.out.println("Product ID Missmatch !! ");
                                 }
-
                              break;
 
                             case 3:
-
                                 System.out.println("-----------------------------------");
                                 System.out.println("  You Choose Show Add Sell History ");
                                 System.out.println("-----------------------------------\n");
                                 fileReadWrite.readFromFile();
-
                              break;
 
                             case 4:
-
                                 System.out.println("Going back ....");
                                 System.out.println();
                                 choice = 5;
-
                              break;
 
                             default:
-
                                 System.out.println("You Press Wrong keyword !!");
-
                              break;
                         }
                     }
                     choice = 7;
                 break;
-
                 case 5:
 
                     System.out.println(" Exited ... ");
                     choice = 5;
-
                 break;
 
                 default:
-
                 System.out.println(" You press wrong keyword !!   ");
-
                 break;
-
             }
-
         }while(choice != 5);   
     }
 
